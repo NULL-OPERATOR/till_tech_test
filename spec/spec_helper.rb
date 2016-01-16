@@ -16,7 +16,18 @@
 # users commonly want.
 #
 require 'coveralls'
+require 'simplecov'
+require 'rspec'
+require 'capybara'
+
 Coveralls.wear!
+
+SimpleCov.formatters = [
+  SimpleCov::Formatter::HTMLFormatter,
+  Coveralls::SimpleCov::Formatter
+]
+
+
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
 
