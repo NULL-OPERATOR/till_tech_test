@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/NULL-OPERATOR/till_tech_test.svg?branch=master)](https://travis-ci.org/NULL-OPERATOR/till_tech_test) [![Coverage Status](https://coveralls.io/repos/makersacademy/till_tech_test/badge.svg?branch=master&service=github)](https://coveralls.io/github/makersacademy/till_tech_test?branch=master)
+[![Build Status](https://travis-ci.org/NULL-OPERATOR/till_tech_test.svg?branch=master)](https://travis-ci.org/NULL-OPERATOR/till_tech_test) [![Coverage Status](https://coveralls.io/repos/makersacademy/till_tech_test/badge.svg?branch=master&service=github)](https://coveralls.io/github/makersacademy/till_tech_test?branch=master) [![Code Climate](https://codeclimate.com/github/NULL-OPERATOR/till_tech_test/badges/gpa.svg)](https://codeclimate.com/github/NULL-OPERATOR/till_tech_test)
 ==============
 
 **Till tech test**
@@ -19,7 +19,7 @@ This is what a sample receipt looks like:
 Version 1
 ---------
 
-Implement a system that contains the business logic to produce receipts similar to this, based on a `json` price list and test orders. A sample `.json` file has been provided with the list of products sold at this particular coffee shop. 
+Implement a system that contains the business logic to produce receipts similar to this, based on a `json` price list and test orders. A sample `.json` file has been provided with the list of products sold at this particular coffee shop.
 
 Here are some sample orders you can try - whether you use this information is up to you:
 

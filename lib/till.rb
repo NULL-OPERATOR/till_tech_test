@@ -4,8 +4,8 @@ require "json"
 class Till
   attr_reader :menu, :order, :names
   TAX = 8.64
-  def initialize(menu)
-    json_input = menu || File.read("hipstercoffee.json")
+  def initialize(input)
+    json_input = input || File.read("hipstercoffee.json")
     @input =  (JSON.parse(json_input)).reduce
     @menu = @input["prices"][0]
     @order = {}
@@ -59,7 +59,6 @@ class Till
   end
 
   def total
-    # "9.5"
     @sub_total.reduce(:+)
   end
 end

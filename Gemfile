@@ -11,5 +11,6 @@ group :test do
   gem 'byebug'
   gem 'rspec-sinatra'
   gem 'sass'
+  gem 'coveralls', require: false
 
 end
