@@ -1,5 +1,6 @@
 {
-  "timeDate": "Sat Jan 16 17:56:05 2016",
+  "total": 59.074799999999996,
+  "timeDate": "Sat Jan 16 19:47:43 2016",
   "shopName": "oh",
   "address": "12",
   "phone": "007",
@@ -7,7 +8,9 @@
 
   ],
   "orderList": {
-    "Coffee": "2 x 4.75"
+    "Coffee": "12 x 4.75"
   },
-  "total": 9.5
+  "discounts": 2.85,
+  "tax": 4.9248,
+  "subTotal": 57.0
 }

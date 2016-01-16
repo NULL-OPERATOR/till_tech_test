@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-01-16T17:56:05+00:00">2016-01-16T17:56:05+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-01-16T19:47:43+00:00">2016-01-16T19:47:43+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.8
+         5.4
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>1</b> files in total.
-    <b>33</b> relevant lines. 
-    <span class="green"><b>33</b> lines covered</span> and
+    <b>38</b> relevant lines. 
+    <span class="green"><b>38</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -53,11 +53,11 @@
       <tr>
         <td class="strong"><a href="#e3e18533b73220df3c04a0e51a59086baea6b5f0" class="src_link" title="lib/till.rb">lib/till.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>60</td>
-        <td>33</td>
-        <td>33</td>
+        <td>75</td>
+        <td>38</td>
+        <td>38</td>
         <td>0</td>
-        <td>3.8</td>
+        <td>5.4</td>
       </tr>
       
     </tbody>
@@ -81,8 +81,8 @@
     <h3>lib/till.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>33</b> relevant lines. 
-      <span class="green"><b>33</b> lines covered</span> and
+      <b>38</b> relevant lines. 
+      <span class="green"><b>38</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -93,37 +93,37 @@
         <li class="covered" data-hits="1" data-linenumber="1">
           <span class="hits">1</span>
           
-          <code class="ruby">require &quot;oj&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="2">
-          <span class="hits">1</span>
-          
           <code class="ruby">require &quot;json&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="3">
+        <li class="never" data-hits="" data-linenumber="2">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="4">
+        <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
           <code class="ruby">class Till</code>
         </li>
       
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  attr_reader :menu, :order, :names, :discounts, :sub_total</code>
+        </li>
+      
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">  attr_reader :menu, :order, :names</code>
+          <code class="ruby">  TAX = 0.0864</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="6">
           
-          <code class="ruby">  TAX = 8.64</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="7">
@@ -132,286 +132,286 @@
           <code class="ruby">  def initialize(input)</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="8">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="11" data-linenumber="8">
+          <span class="hits">11</span>
           
           <code class="ruby">    json_input = input || File.read(&quot;hipstercoffee.json&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="9">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="11" data-linenumber="9">
+          <span class="hits">11</span>
           
           <code class="ruby">    @input =  (JSON.parse(json_input)).reduce</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="10">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="11" data-linenumber="10">
+          <span class="hits">11</span>
           
           <code class="ruby">    @menu = @input[&quot;prices&quot;][0]</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="11">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="11" data-linenumber="11">
+          <span class="hits">11</span>
           
-          <code class="ruby">    @order = {}</code>
+          <code class="ruby">    @order, @sub_total, @discounts, @names = {}, 0, 0, []</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="12">
-          <span class="hits">8</span>
-          
-          <code class="ruby">    @sub_total = []</code>
-        </li>
-      
-        <li class="covered" data-hits="8" data-linenumber="13">
-          <span class="hits">8</span>
-          
-          <code class="ruby">    @names = []</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="never" data-hits="" data-linenumber="12">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="16">
+        <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
           <code class="ruby">  def show_menu</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="17">
+        <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
           <code class="ruby">    @menu</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="20">
+        <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
           <code class="ruby">  def add_order(item, quantity=1)</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="21">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="14" data-linenumber="19">
+          <span class="hits">14</span>
           
           <code class="ruby">    @order[item] ? @order[item] += quantity : @order[item] = quantity</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="22">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="14" data-linenumber="20">
+          <span class="hits">14</span>
           
           <code class="ruby">    add_price(item, quantity)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="25">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def add_price(item, quantity)</code>
-        </li>
-      
-        <li class="covered" data-hits="9" data-linenumber="26">
-          <span class="hits">9</span>
-          
-          <code class="ruby">    @sub_total &lt;&lt; @menu[item] * quantity</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="27">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="28">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="29">
+        <li class="covered" data-hits="1" data-linenumber="23">
           <span class="hits">1</span>
           
           <code class="ruby">  def add_name(name=&quot;&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="30">
+        <li class="covered" data-hits="1" data-linenumber="24">
           <span class="hits">1</span>
           
           <code class="ruby">    @names &lt;&lt; name</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="31">
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="32">
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="33">
+        <li class="covered" data-hits="1" data-linenumber="27">
           <span class="hits">1</span>
           
           <code class="ruby">  def receipt</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="34">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="28">
+          <span class="hits">6</span>
           
-          <code class="ruby">    bill ={timeDate: time_date,</code>
+          <code class="ruby">    bill ={total: total,</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="35">
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby">           timeDate: time_date,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby">           shopName: @input[&quot;shopName&quot;],</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="36">
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby">           address: @input[&quot;address&quot;],</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="37">
+        <li class="never" data-hits="" data-linenumber="32">
           
           
           <code class="ruby">           phone: @input[&quot;phone&quot;],</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="38">
+        <li class="never" data-hits="" data-linenumber="33">
           
           
           <code class="ruby">           names: @names,</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="39">
+        <li class="never" data-hits="" data-linenumber="34">
           
           
           <code class="ruby">           orderList: order_list.to_h,</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="40">
+        <li class="never" data-hits="" data-linenumber="35">
           
           
-          <code class="ruby">           total: total}</code>
+          <code class="ruby">           discounts: @discounts,</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="41">
-          <span class="hits">8</span>
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
+          <code class="ruby">           tax: tax,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="37">
+          
+          
+          <code class="ruby">           subTotal: @sub_total}</code>
+        </li>
+      
+        <li class="covered" data-hits="12" data-linenumber="38">
+          <span class="hits">12</span>
           
           <code class="ruby">    File.open(&quot;bill.json&quot;,&quot;w&quot;){|f| f &lt;&lt; JSON.pretty_generate(bill) }</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="42">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="39">
+          <span class="hits">6</span>
           
           <code class="ruby">    JSON.pretty_generate(bill)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="43">
+        <li class="never" data-hits="" data-linenumber="40">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="never" data-hits="" data-linenumber="41">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="45">
+        <li class="covered" data-hits="1" data-linenumber="42">
           <span class="hits">1</span>
           
           <code class="ruby">  private</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="46">
+        <li class="never" data-hits="" data-linenumber="43">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="47">
+        <li class="covered" data-hits="1" data-linenumber="44">
           <span class="hits">1</span>
           
-          <code class="ruby">  def time_date</code>
+          <code class="ruby">  def add_price(item, quantity)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="48">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="14" data-linenumber="45">
+          <span class="hits">14</span>
           
-          <code class="ruby">    Time.now.asctime</code>
+          <code class="ruby">    @sub_total += (@menu[item] * quantity)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="49">
+        <li class="covered" data-hits="14" data-linenumber="46">
+          <span class="hits">14</span>
+          
+          <code class="ruby">    food_discount(item)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="50">
+        <li class="never" data-hits="" data-linenumber="48">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="51">
+        <li class="covered" data-hits="1" data-linenumber="49">
           <span class="hits">1</span>
           
-          <code class="ruby">  def order_list</code>
+          <code class="ruby">  def food_discount(food)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="52">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="14" data-linenumber="50">
+          <span class="hits">14</span>
           
-          <code class="ruby">    @order.map do |item,amount|</code>
+          <code class="ruby">    @discounts += food.include?(&quot;Muffin&quot;) ? @menu[food] * 0.1 : 0</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="53">
-          <span class="hits">4</span>
+        <li class="never" data-hits="" data-linenumber="51">
           
-          <code class="ruby">    [item, (amount.to_s+&quot; x &quot; + &quot;#{@menu[item]}&quot;)]</code>
+          
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="54">
+        <li class="never" data-hits="" data-linenumber="52">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="53">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def bill_discount</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="54">
+          <span class="hits">6</span>
+          
+          <code class="ruby">    @sub_total &gt;= 50 ? @discounts += @sub_total * 0.05 : 0</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="55">
@@ -429,13 +429,13 @@
         <li class="covered" data-hits="1" data-linenumber="57">
           <span class="hits">1</span>
           
-          <code class="ruby">  def total</code>
+          <code class="ruby">  def time_date</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="58">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="58">
+          <span class="hits">6</span>
           
-          <code class="ruby">    @sub_total.reduce(:+)</code>
+          <code class="ruby">    Time.now.asctime</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="59">
@@ -445,6 +445,96 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="60">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="61">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def order_list</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="62">
+          <span class="hits">6</span>
+          
+          <code class="ruby">    @order.map do |item,amount|</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="63">
+          <span class="hits">6</span>
+          
+          <code class="ruby">    [item, (amount.to_s + &quot; x &quot; + &quot;#{@menu[item]}&quot;)]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="64">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="65">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="66">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="67">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def tax</code>
+        </li>
+      
+        <li class="covered" data-hits="12" data-linenumber="68">
+          <span class="hits">12</span>
+          
+          <code class="ruby">    @sub_total * TAX</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="69">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="70">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="71">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def total</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="72">
+          <span class="hits">6</span>
+          
+          <code class="ruby">    bill_discount</code>
+        </li>
+      
+        <li class="covered" data-hits="6" data-linenumber="73">
+          <span class="hits">6</span>
+          
+          <code class="ruby">    @sub_total + tax - @discounts</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="74">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="75">
           
           
           <code class="ruby">end</code>
