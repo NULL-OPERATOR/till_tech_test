@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/NULL-OPERATOR/till_tech_test.svg?branch=master)](https://travis-ci.org/NULL-OPERATOR/till_tech_test) [![Coverage Status](https://coveralls.io/repos/makersacademy/till_tech_test/badge.svg?branch=master&service=github)](https://coveralls.io/github/makersacademy/till_tech_test?branch=master) [![Code Climate](https://codeclimate.com/github/NULL-OPERATOR/till_tech_test/badges/gpa.svg)](https://codeclimate.com/github/NULL-OPERATOR/till_tech_test)
+[![Build Status](https://travis-ci.org/NULL-OPERATOR/till_tech_test.svg?branch=master)](https://travis-ci.org/NULL-OPERATOR/till_tech_test) [![Coverage Status](https://coveralls.io/repos/NULL-OPERATOR/till_tech_test/badge.svg?branch=master&service=github)](https://coveralls.io/github/NULL-OPERATOR/till_tech_test?branch=master) [![Code Climate](https://codeclimate.com/github/NULL-OPERATOR/till_tech_test/badges/gpa.svg)](https://codeclimate.com/github/NULL-OPERATOR/till_tech_test)
 ==============
 
 **Till tech test**

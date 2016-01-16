@@ -1,6 +1,6 @@
+require "spec_helper"
 require "till"
 require "json"
-require "spec_helper"
 
 describe Till do
   let(:till) {Till.new(menu_items)}
