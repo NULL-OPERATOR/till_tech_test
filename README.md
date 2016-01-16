@@ -1,7 +1,7 @@
-Till tech test
-==============
+[![Build Status](https://travis-ci.org/NULL-OPERATOR/till_tech_test.svg?branch=master)](https://travis-ci.org/NULL-OPERATOR/till_tech_test) [![Coverage Status](https://coveralls.io/repos/makersacademy/till_tech_test/badge.svg?branch=master&service=github)](https://coveralls.io/github/makersacademy/till_tech_test?branch=master)
 
-*Instructions*: Please fork this repo and submit a pull request once you've finished. Then prepare for code review!
+**Till tech test**
+==============
 
 ![a till](/images/till.jpg)
 
