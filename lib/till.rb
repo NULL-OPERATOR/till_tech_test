@@ -27,10 +27,6 @@ class Till
   end
 
   def add_name(name="")
-    @names.push(name)
-  end
-
-  def add_name(name)
     @names << name
   end
 
