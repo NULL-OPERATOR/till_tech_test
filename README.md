@@ -1,7 +1,7 @@
-Till tech test
-==============
+[![Build Status](https://travis-ci.org/NULL-OPERATOR/till_tech_test.svg?branch=master)](https://travis-ci.org/NULL-OPERATOR/till_tech_test)
 
-*Instructions*: Please fork this repo and submit a pull request once you've finished. Then prepare for code review!
+**Till tech test**
+==============
 
 ![a till](/images/till.jpg)
 
