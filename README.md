@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/NULL-OPERATOR/till_tech_test.svg?branch=master)](https://travis-ci.org/NULL-OPERATOR/till_tech_test) [![Coverage Status](https://coveralls.io/repos/makersacademy/till_tech_test/badge.svg?branch=master&service=github)](https://coveralls.io/github/makersacademy/till_tech_test?branch=master)
+==============
 
 **Till tech test**
 ==============
