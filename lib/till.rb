@@ -2,12 +2,14 @@ require "oj"
 require "json"
 
 class Till
-  attr_reader :menu
+  attr_reader :menu, :order, :names
   TAX = 8.64
   def initialize(menu)
-    menu_input = menu || File.read("hipstercoffee.json")
-    @menu =  (JSON.parse(menu_input)).reduce
+    json_input = menu || File.read("hipstercoffee.json")
+    @input =  (JSON.parse(json_input)).reduce
+    @menu = @input["prices"][0]
     @order = {}
+    @sub_total = []
     @names = []
   end
 
@@ -15,28 +17,48 @@ class Till
     @menu
   end
 
-  def add_order(input, quantity=1)
-    @order[input] ? @order[input] += quantity : @order[input] = quantity
+  def add_order(item, quantity=1)
+    @order[item] ? @order[item] += quantity : @order[item] = quantity
+    add_price(item, quantity)
+  end
+
+  def add_price(item, quantity)
+    @sub_total << @menu[item] * quantity
   end
 
   def add_name(name="")
     @names.push(name)
   end
 
-  def receipt
-    nl = "\n"
-    output = Time.now.asctime + nl
-    output << @menu["shopName"] + nl + @menu["address"] + nl
-    @order.each {|item,amount| output << item +" "+ amount+" x " + "#{@menu[item]}" + nl }
-    # output << total
-    output
-  end
-
-  def total
-  end
-
   def add_name(name)
     @names << name
   end
 
+  def receipt
+    bill ={timeDate: time_date,
+           shopName: @input["shopName"],
+           address: @input["address"],
+           phone: @input["phone"],
+           names: @names,
+           orderList: order_list.to_h,
+           total: total}
+    File.open("bill.json","w"){|f| f << JSON.pretty_generate(bill) }
+    JSON.pretty_generate(bill)
+  end
+
+  private
+
+  def time_date
+    Time.now.asctime
+  end
+
+  def order_list
+    @order.map do |item,amount|
+    [item, (amount.to_s+" x " + "#{@menu[item]}")]
+    end
+  end
+
+  def total
+    "9.5"
+  end
 end
