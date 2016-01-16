@@ -59,6 +59,7 @@ class Till
   end
 
   def total
-    "9.5"
+    # "9.5"
+    @sub_total.reduce(:+)
   end
 end

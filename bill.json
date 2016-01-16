@@ -1,5 +1,5 @@
 {
-  "timeDate": "Sat Jan 16 16:17:55 2016",
+  "timeDate": "Sat Jan 16 16:32:25 2016",
   "shopName": "oh",
   "address": "12",
   "phone": "007",
@@ -9,5 +9,5 @@
   "orderList": {
     "Coffee": "2 x 4.75"
   },
-  "total": "9.5"
+  "total": 9.5
 }
