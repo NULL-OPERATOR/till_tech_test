@@ -1,16 +1,16 @@
 {
-  "total": 59.074799999999996,
-  "timeDate": "Sat Jan 16 19:47:43 2016",
+  "total": 10.3208,
+  "timeDate": "Sun Jan 17 13:54:27 2016",
   "shopName": "oh",
   "address": "12",
   "phone": "007",
-  "names": [
-
-  ],
+  "names": "",
   "orderList": {
-    "Coffee": "12 x 4.75"
+    "Coffee": "2 x 4.75"
   },
-  "discounts": 2.85,
-  "tax": 4.9248,
-  "subTotal": 57.0
+  "discounts": 0,
+  "tax": 0.8208000000000001,
+  "cash": 30,
+  "change": 19.6792,
+  "subTotal": 9.5
 }

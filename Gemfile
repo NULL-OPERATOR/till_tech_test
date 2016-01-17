@@ -3,7 +3,12 @@ source 'https://rubygems.org'
 ruby '2.2.3'
 
 gem 'sinatra'
-gem 'oj'
+gem 'opal'
+gem 'rake'
+gem 'jekyll'
+gem 'opal-browser' # optional
+gem 'reactive-ruby'
+gem 'opal-jquery'  # optional
 
 group :test do
   gem 'rspec'

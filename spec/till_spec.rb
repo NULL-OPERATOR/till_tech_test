@@ -13,7 +13,7 @@ describe Till do
   let(:time_and_date) { Time.now.asctime }
 
   it "shows a list of menu items" do
-    expect(till.show_menu).to eq(menu_output)
+    expect(till.menu).to eq(menu_output)
   end
 
   before(:each) do
@@ -32,13 +32,13 @@ describe Till do
 
     it "can assign a name to the order" do
       till.add_name("gnarr")
-      expect(till.names).to include("gnarr")
+      expect(till.receipt).to include("\"names\": \"gnarr\"")
     end
   end
 
   context "Outputting the receipt: " do
     it "lists the item ordered and price" do
-      expect(till.receipt).to include("Coffee" && "2 x 4.75")
+      expect(till.receipt).to include("\"Coffee\": \"2 x 4.75")
     end
 
     it "lists the restaurant name and phone number" do
@@ -46,11 +46,11 @@ describe Till do
     end
 
     it "outputs a sub-total" do
-      expect(till.receipt).to include("subTotal" && "9.5")
+      expect(till.receipt).to include("\"subTotal\": 9.5")
     end
 
     it "outputs a total plus tax" do
-      expect(till.receipt).to include("total" && "10.3208")
+      expect(till.receipt).to include(" \"total\": 10.3208")
     end
 
     it "shows the current time and date" do
@@ -61,14 +61,24 @@ describe Till do
   context "Calculating discounts: " do
     it "calculates muffin discount at 10%" do
       till.add_order("Muffin")
-      expect(till.discounts).to eq(0.1)
+      expect(till.receipt).to include("\"discounts\": 0.1")
     end
 
     it "calculates over $50 discount at 5%" do
       till.add_order("Coffee", 10)
-      till.receipt
-      expect(till.discounts).to eq(2.85)
+      expect(till.receipt).to include("\"discounts\": 2.85")
     end
   end
 
+  context "Payments: " do
+    before(:each) { till.pay(30) }
+
+    it "can handle a payment input" do
+      expect(till.receipt).to include("\"cash\": 30")
+    end
+
+    it "calculates the change needed" do
+      expect(till.receipt).to include("\"change\": 19.6792")
+    end
+  end
 end
