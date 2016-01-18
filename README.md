@@ -6,14 +6,9 @@
 
 Currently using :
 - Ruby/Rspec
-- Jekyll
-- React.rb
 
-```
-$ git clone [this repo]
-$ cd till_tech_test
-$ bundle exec jekyll serve --watch
-```
+A ruby project to assimilate a Json, accept input via a ui, and output a final version to be printed.
+- currently working on incorporating the ui (as react.js / react.rb / or angular)
 
 ![a till](/images/till.jpg)
 
