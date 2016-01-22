@@ -1,13 +1,13 @@
 require "spec_helper"
-require "till"
 require "json"
 require "discounts"
 
 describe Discounts do
-  # let(:discounts) {Discounts.new}
+  let(:discounts) {Discounts.new}
 
   context "Calculating discounts: " do
     it "calculates muffin discount at 10%" do
+      discounts.food("Muffin")
       # till.add_order("Muffin")
       # expect(till.receipt).to include("\"discounts\": 0.1")
     end
