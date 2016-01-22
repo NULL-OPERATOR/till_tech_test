@@ -1,12 +1,16 @@
-require 'sinatra/base'
+require "sinatra/base"
+require "json"
 require_relative 'till'
 
 class App < Sinatra::Base
   set :public_folder, File.dirname(__FILE__) + '/public'
-  # include ViewHelpers
 
   get '/' do
-    @till = Till.new
-    erb :index
+    File.read('lib/views/index.html')
+  end
+
+  get '/getData' do
+    Till.new.to
+
   end
 end
