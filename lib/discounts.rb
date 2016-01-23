@@ -4,11 +4,15 @@ class Discounts
     @bill_total = 0
   end
 
-  def food(food )
-    @food_discounts += food.include?("Muffin") ? @menu[food] * 0.1 : 0
+  def food(food, price)
+    if food.include?("Muffin")
+      @food_total += price * 0.1
+    end
   end
 
-  def bill
-    @sub_total >= 50 ? @sub_total * 0.05 : 0
+  def bill(sub_total)
+    if sub_total >= 50
+      @bill_total += sub_total * 0.05
+    end
   end
 end

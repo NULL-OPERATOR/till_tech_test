@@ -9,14 +9,14 @@
     <!-- <script type="text/javascript" src="javascripts/index.js"></script> -->
   </head>
 
-  <body ng-app="myApp">
-    <div ng-controller="MyCtrl">
-      <button ng-click="loadData()">Load Data From Server</button>
+  <body ng-app="App">
+    <div ng-controller="AppCtrl">
+      <button ng-click="loadData()">Load Data</button>
       <ul>
            <li ng-repeat="item in items">ID: {{item.id}}, Name: {{item.name}}</li>
       </ul>
       <input type="text" ng-model="task">
-      <button ng-click="pushTask()">push</button>
+      <button ng-click="pushData('hello', task)">push</button>
   </div>
   </body>
 </html>
