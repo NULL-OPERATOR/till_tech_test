@@ -10,8 +10,8 @@ describe Restaurant do
   let(:menu_output) { {"Coffee"=>4.75, "Muffin"=>1} }
   let(:time_and_date) { Time.now.asctime }
 
-  it "parses a menu selection" do
-
+  it "lists the restaurant name and phone number" do
+    expect(restaurant.name).to eq("oh")
   end
 
 end

@@ -9,7 +9,6 @@ gem 'jekyll'
 gem 'opal-browser' # optional
 gem 'reactive-ruby'
 gem 'opal-jquery'  # optional
-gem "sinatra-contrib"
 
 group :test do
   gem 'rspec'

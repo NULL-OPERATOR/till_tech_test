@@ -2,6 +2,7 @@ require "sinatra/base"
 require "json"
 require_relative 'till'
 
+
 class App < Sinatra::Base
   set :public_folder, File.dirname(__FILE__) + '/public'
 
@@ -11,6 +12,10 @@ class App < Sinatra::Base
 
   get '/getData' do
     Till.new.to
+  end
+  post '/new' do
+    params.merge! JSON.parse(request.env["rack.input"].read)
+    p params[:name]
 
   end
 end

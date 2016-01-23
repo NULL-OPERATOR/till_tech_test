@@ -4,7 +4,7 @@ class Discounts
     @bill_total = 0
   end
 
-  def food(food, )
+  def food(food )
     @food_discounts += food.include?("Muffin") ? @menu[food] * 0.1 : 0
   end
 
