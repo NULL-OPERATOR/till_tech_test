@@ -15,8 +15,13 @@ class Till
     @order = order_klass || Order.new(@shop.item("prices"))
   end
 
+  def add_item(item, quantity=1)
+    # @order.add(item, quantity)
+    # @order.list
+    "potato"
+  end
+
   def finalise(cash)
     # @cash = cash
   end
-
 end

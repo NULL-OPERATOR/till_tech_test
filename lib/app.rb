@@ -13,11 +13,10 @@ class App < Sinatra::Base
   end
 
   get '/getData' do
-
+    # setup routes
   end
 
   post '/pushData' do
-    # till = session[:till]
     @till = Till.new
     params.merge! JSON.parse(request.env["rack.input"].read)
 

@@ -6,8 +6,8 @@ class Order
   def initialize(menu)
     @menu = menu
     @names = []
-    @sub_total = 0
     @items = {}
+    @sub_total = 0
     @food_discounts = 0
     @bill_discounts = 0
   end
@@ -20,7 +20,7 @@ class Order
     @sub_total + tax - @bill_discounts
   end
 
-  def add(item, quantity=1)
+  def add(item, quantity)
     if @items[item]
       @items[item] += quantity
     else
