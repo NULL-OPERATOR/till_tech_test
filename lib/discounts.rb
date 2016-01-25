@@ -1,11 +1,12 @@
-class Discounts
+class CheckDiscounts
+  attr_reader :food_total, :bill_total
   def initialize
     @food_total = 0
     @bill_total = 0
   end
 
-  def food(food, price)
-    if food.include?("Muffin")
+  def food(input, price)
+    if input.include?("Muffin")
       @food_total += price * 0.1
     end
   end

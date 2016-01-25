@@ -1,35 +1,53 @@
 require_relative "./discounts"
 
 class Order
+  attr_reader :names, :items
   TAX = 0.0864
-  def initialize(menu, discounts)
-    @discounts = discounts || Discounts.new
-    # @shop = shop || Shop.new(input)
+  def initialize(menu)
+    @menu = menu
+    @names = []
+    @sub_total = 0
+    @items = {}
+    @food_discounts = 0
+    @bill_discounts = 0
   end
 
+  def add_name(name="")
+    @names << name
+  end
 
   def total
-    @sub_total + tax - @food_discounts - bill_discount
+    @sub_total + tax - @bill_discounts
   end
 
   def add(item, quantity=1)
-    @order[item] ? @order[item] += quantity : @order[item] = quantity
+    if @items[item]
+      @items[item] += quantity
+    else
+      @items[item] = quantity
+    end
     add_price(item, quantity)
-  end
-
-  def add_price(item, quantity)
-    @sub_total += (@menu[item] * quantity)
-    food_discount(item)
   end
 
   private
 
+  def add_price(item, quantity)
+    price = @menu[item]
+    @sub_total += (price * quantity)
+    food_discount(item)
+  end
+
   def tax
     (@sub_total * TAX)
   end
-  def order_list
-    @order.map do |item,amount|
-    [item, (amount.to_s + " x " + "#{@menu[item]}")]
+
+  def food_discount(input)
+    @food_discounts += input.include?("Muffin") ? @menu[input] * 0.1 : 0
+  end
+
+  def bill_discount
+    if @sub_total >= 50
+      @bill_discounts += @sub_total * 0.05
     end
   end
 

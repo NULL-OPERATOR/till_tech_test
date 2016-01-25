@@ -1,33 +1,22 @@
 require "json"
-# require_relative "./order"
-# require_relative "./shop"
-# require_relative "./shop_data"
+require_relative "./order"
+require_relative "./shop"
 
 class Till
-
-  def hello(input)
-    "ahaa" + input
+  attr_reader :order_history, :order, :shop
+  def initialize
+    @order_history = []
+    @order = "setup"
   end
-  # def initialize(input, shop, order)
-  #   @shop = shop || Shop.new(input)
-  #   @order = order || Order.new(@shop.menu)
-  # end
-  #
-  # def add_name(name="")
-  #   @names << name
-  # end
-  #
-  # def pay(cash)
-  #   @cash = cash
-  # end
-  #
-  # private
-  #
-  # def time_date
-  #   Time.now.asctime
-  # end
-  #
-  # def calculate_change
-  #   @cash - total
-  # end
+
+  def new_order(input, shop_klass, order_klass)
+    @order_history << @order
+    @shop = shop_klass || Shop.new(input)
+    @order = order_klass || Order.new(@shop.item("prices"))
+  end
+
+  def finalise(cash)
+    # @cash = cash
+  end
+
 end

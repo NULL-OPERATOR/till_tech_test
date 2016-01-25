@@ -1,20 +1,15 @@
 require "spec_helper"
-require "json"
+# require "json"
 require "discounts"
 
-describe Discounts do
-  let(:discounts) {Discounts.new}
+describe CheckDiscounts do
+  let(:discounts) { CheckDiscounts.new }
 
-  context "Calculating discounts: " do
-    it "calculates muffin discount at 10%" do
-      discounts.food("Muffin")
-      # till.add_order("Muffin")
-      # expect(till.receipt).to include("\"discounts\": 0.1")
-    end
+  it "calculates muffin discount at 10%" do
+    expect(discounts.food("Muffin", 5)).to eq(0.5)
+  end
 
-    it "calculates over $50 discount at 5%" do
-      # till.add_order("Coffee", 10)
-      # expect(till.receipt).to include("\"discounts\": 2.85")
-    end
+  it "calculates over $50 discount at 5%" do
+    expect(discounts.bill(60)).to eq 3
   end
 end

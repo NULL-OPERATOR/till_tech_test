@@ -13,18 +13,15 @@ class App < Sinatra::Base
   end
 
   get '/getData' do
-    # Till.new.to
+
   end
 
-  post '/new' do
+  post '/pushData' do
     # till = session[:till]
     @till = Till.new
     params.merge! JSON.parse(request.env["rack.input"].read)
-    p params[:route]
-    p params[:input]
-    # meth = params[:route]
-    input = params[:input]
-    p @till.send(:"#{params[:route]}", params[:input])
+
+    p @till.send(:"#{params[:method]}", params[:input])
   end
 
   run! if app_file == $0
