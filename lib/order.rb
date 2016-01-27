@@ -20,7 +20,7 @@ class Order
     @sub_total + tax - @bill_discounts
   end
 
-  def add(item, quantity)
+  def add(item, quantity=1)
     if @items[item]
       @items[item] += quantity
     else

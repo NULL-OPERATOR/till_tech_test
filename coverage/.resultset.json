@@ -35,24 +35,6 @@
         null,
         null
       ],
-      "/Users/oh/projects/tech_tests/till_tech_test/spec/restaurant_spec.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
       "/Users/oh/projects/tech_tests/till_tech_test/spec/shop_spec.rb": [
         1,
         null,
@@ -88,7 +70,6 @@
         1,
         null,
         1,
-        null,
         2,
         null,
         null,
@@ -106,6 +87,6 @@
         null
       ]
     },
-    "timestamp": 1453738282
+    "timestamp": 1453900723
   }
 }

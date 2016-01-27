@@ -11,7 +11,6 @@ describe Till do
   let(:time_and_date) { Time.now.asctime }
 
   before(:each) do
-    # allow(order).to receive(:add)
     allow(shop).to receive(:item).and_return("item")
   end
 
